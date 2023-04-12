@@ -1,4 +1,6 @@
-<script setup>Err....</script>
+<script setup>
+    console.log("success")
+</script>
 
 <template><div>TestComponent</div></template>
 
