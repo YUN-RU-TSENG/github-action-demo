@@ -1,5 +1,5 @@
-<script setup>Err</script>
+<script setup></script>
 
-<template>Error</template>
+<template><div>TestComponent</div></template>
 
 <style scoped></style>
