@@ -2,7 +2,11 @@
 name: CI
 
 # 什麼情況下觸發 workflow
-on: [push, pull_request]
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
 
 # Job 可以循序或平行執行
 jobs:
