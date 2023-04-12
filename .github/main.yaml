@@ -1,0 +1,28 @@
+# workflow 名稱
+name: CI
+
+# 什麼情況下觸發 workflow
+on: [push, pull_request]
+
+# Job 可以循序或平行執行
+jobs:
+    # 這個 workflow 只有一個 job，名稱為 "build"
+    build:
+        # 這個 job 會執行在作業系統為 ubuntu 的 runner
+        runs-on: ubuntu-latest
+
+        # 作為 Job 的一部分，Steps 會循序執行一連串的動作
+        steps:
+            # 在 $GITHUB_WORKSPACE 下簽出您的存儲庫，以便您的工作可以訪問它
+            - uses: actions/checkout@v2
+
+            - name: Run a one-line script
+              run: echo Hello, world!
+
+            - uses: actions/checkout@v2
+            - name: Install dependencies
+                    run: npm install
+            - name: Format code
+                    run: npm run format
+            - name: Linter check code
+                    run: npm run lint:fix
