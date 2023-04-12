@@ -2,7 +2,7 @@
 name: CI
 
 # 什麼情況下觸發 workflow
-on: [ push, pull_request ]
+on: [push, pull_request]
 
 # Job 可以循序或平行執行
 jobs:
@@ -21,8 +21,8 @@ jobs:
 
             - uses: actions/checkout@v2
             - name: Install dependencies
-                    run: npm install
+              run: npm install
             - name: Format code
-                    run: npm run format
+              run: npm run format
             - name: Linter check code
-                    run: npm run lint:fix
+              run: npm run lint:fix
