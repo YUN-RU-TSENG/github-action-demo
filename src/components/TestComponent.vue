@@ -1,4 +1,4 @@
-<script setup></script>
+<script setup>Err....</script>
 
 <template><div>TestComponent</div></template>
 
