@@ -2,7 +2,7 @@ name: learn-github-action
 run-name: ${{ github.actor }} is trigger github action
 on:
   - push
-job:
+jobs:
   job-one:
     runs-on: ubuntu-latest
     steps:
