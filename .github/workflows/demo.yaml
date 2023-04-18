@@ -3,15 +3,11 @@ run-name: ${{ github.actor }} is trigger github action
 on:
   - pull_request
 jobs:
-  job-one:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
-      - name: Setup node version
-      - uses: actions/setup-node@3
-        with:
-          node-version: "18"
+    steps:
+      - uses: actions/checkout@v2
 
       - name: npm install
         run: npm i
