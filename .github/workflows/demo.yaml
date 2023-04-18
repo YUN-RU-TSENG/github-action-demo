@@ -19,8 +19,8 @@ job:
       - uses: actions/checkout@v3
       # 該 action 會安裝指定版本的 node
       - uses: actions/setup-node@3
-          with:
-            node-version: "18"
+        with:
+          node-version: "18"
             # 告訴 runner 執行指定的 command
       # 安裝 npm
       - run: npm i
