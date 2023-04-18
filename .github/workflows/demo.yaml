@@ -9,22 +9,22 @@ on: [push]
 
 # 將 github action 中的作業組合在一起
 job:
-    # 作業名稱
-    job-one:
-        # 指作業將在哪一個類型的 VM 中運行
-        runs-on: ubuntu-latest
-        # 作業的所有步驟
-        steps:
-            # actions/checkout@3 是一組 GitHub 中預定義的 action，該 action 會把我們的代碼下載到當前 workflow 中
-            - uses: actions/checkout@v3
-            # 該 action 會安裝指定版本的 node
-            - uses: actions/setup-node@3
-              with:
-                node-version: "18"
+  # 作業名稱
+  job-one:
+    # 指作業將在哪一個類型的 VM 中運行
+    runs-on: ubuntu-latest
+    # 作業的所有步驟
+    steps:
+      # actions/checkout@3 是一組 GitHub 中預定義的 action，該 action 會把我們的代碼下載到當前 workflow 中
+      - uses: actions/checkout@v3
+      # 該 action 會安裝指定版本的 node
+      - uses: actions/setup-node@3
+          with:
+            node-version: "18"
             # 告訴 runner 執行指定的 command
-            # 安裝 npm
-            - run: npm i
-            # 執行 linter，錯誤時暫停執行
-            - run: npm run lint
-            # 執行 build，錯誤時跳出
-            - run: npm run build:ci
+      # 安裝 npm
+      - run: npm i
+      # 執行 linter，錯誤時暫停執行
+      - run: npm run lint
+      # 執行 build，錯誤時跳出
+      - run: npm run build:ci
